@@ -29,3 +29,29 @@ databaseChangeLog:
       rollback:
       - sqlFile:
           path: 11_rollbacks/09_inserts/01-insert-person-rollback.sql
+
+  - changeSet:
+      id: 03_create_orders
+      author: johanacero2509@gmail.com
+      comment: creation of order table
+
+      changes:
+      - sqlFile:
+          path: 01_tables/02-create-orders.sql
+          stripComments: false
+      rollback:
+      - sqlFile:
+          path: 11_rollbacks/01_tables/02-create-orders-rollback.sql
+
+  - changeSet:
+      id: 04_create_product
+      author: johanacero2509@gmail.com
+      comment: creation of the products table
+
+      changes:
+      - sqlFile:
+          path: 01_tables/03-create-product.sql
+          stripComments: false
+      rollback:
+      - sqlFile:
+          path: 11_rollbacks/01_tables/03-create-product-rollback.sql
