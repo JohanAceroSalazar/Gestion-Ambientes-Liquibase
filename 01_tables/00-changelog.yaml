@@ -55,3 +55,42 @@ databaseChangeLog:
       rollback:
       - sqlFile:
           path: 11_rollbacks/01_tables/03-create-product-rollback.sql
+
+  - changeSet:
+      id: 05_insert_more_person
+      author: johanacero2509@gmail.com
+      comment: insert more person data
+
+      changes:
+      - sqlFile:
+          path: 09_inserts/02-insert-more-person.sql
+          stripComments: false
+      rollback:
+      - sqlFile:
+          path: 11_rollbacks/09_inserts/02-insert-more-person-rollback.sql
+
+  - changeSet:
+      id: 06_insert_orders
+      author: johanacero2509@gmail.com
+      comment: insert data into orders
+
+      changes:
+      - sqlFile:
+          path: 09_inserts/03-insert-orders.sql
+          stripComments: false
+      rollback:
+      - sqlFile:
+          path: 11_rollbacks/09_inserts/03-insert-orders-rollback.sql
+
+  - changeSet:
+      id: 07_insert_product
+      author: johanacero2509@gmail.com
+      comment: insert data into product
+
+      changes:
+      - sqlFile:
+          path: 09_inserts/04-insert-product.sql
+          stripComments: false
+      rollback:
+      - sqlFile:
+          path: 11_rollbacks/09_inserts/04-insert-product-rollback.sql
